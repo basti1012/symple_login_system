@@ -12,8 +12,6 @@ if (file_exists($filename3)) {
    $filename1 = 'setupdatei.php';
    if (file_exists($filename1)) {
        echo "Setupdatei.php exestiert noch im Ordner<br> und kann gegebenfalls noch Manuell ausgeführt werden<br>";
-       $check=true;
-       include('setupdatei.php');
    }else{
        echo "Die dazugehöhrigen Setupdatein wurden vom System gelöscht<br>";
    }
