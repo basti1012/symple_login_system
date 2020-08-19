@@ -86,8 +86,10 @@ if (file_exists($filename3)) {
   <label>
         <input type="submit" class="buttonstyle" value="Setup Starten">
   </label>
+    <!--
   <small>*Die Setupdatein werden nach erfolgreicher Installation vom Server gelöscht.</small>
-  <h5>Es wird eine Config Datei erstellt.</h5>
+-->
+  <h5>Es wird eine mysql.php Datei erstellt.</h5>
 </form>
 <?php
 }
