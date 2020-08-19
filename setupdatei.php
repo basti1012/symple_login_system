@@ -15,24 +15,24 @@ function setup(){
       $zeile='<?php $pwlink="'.$_POST['pw_link'].'"; $tabelle="'.$_POST['name_tabelle'].'";try{$mysql = new PDO("mysql:host='.$_POST['dbhost'].';dbname='.$_POST['dbname'].'", "'.$_POST['dbuser'].'", "'.$_POST['dbpw'].'");$mysql->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );}catch (PDOException $e){echo "SQL Error: ".$e->getMessage();}?>';
       file_put_contents("mysql.php", $zeile);
       include('mysql.php');
-try{
-   $query="CREATE TABLE `$tabelle`(
-   `id` int(20) unsigned NOT NULL AUTO_INCREMENT,
-   `email` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-   `user` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-   `pass` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-   `token` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-    PRIMARY KEY (`id`)
-   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
+      try{
+         $query="CREATE TABLE `$tabelle`(
+         `id` int(20) unsigned NOT NULL AUTO_INCREMENT,
+         `email` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+         `user` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+         `pass` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+         `token` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+          PRIMARY KEY (`id`)
+         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
 
-     $mysql->exec($query);
+           $mysql->exec($query);
            echo "<div class='succes'>Tabelle $tabelle wurde erstellt</div>";
            $eins=true;
-} catch(PDOException $e) {
-    echo $e->getMessage();
-               $eins=false;
+      } catch(PDOException $e) {
+           echo $e->getMessage();
+           $eins=false;
            echo "<div class='error'>Fehler beim erstellen der Tabelle $tabelle  </div>";
-}
+      }
       $filename2 = 'mysql.php';
       if (file_exists($filename2) AND $eins==true){
           if(isset($_POST['kill'])){
@@ -40,9 +40,18 @@ try{
               //unlink('install.php');
               echo "<div class='succes'>Setup Datein wurden gelöscht</div>";
           }
+          if(isset($_POST['kill_bild'])){
+              //unlink('accound.png');
+              //unlink('setup.png');
+              //unlink('anmeldung.png');
+              echo "<div class='succes'>Setup Bioder Datein wurden gelöscht</div>";
+          }
       }else{
            if(isset($_POST['kill'])){
                echo "<div class='error'>Setupdatein wurde nicht gelöscht</div>";
+           }
+           if(isset($_POST['kill_bild'])){
+               echo "<div class='error'>Bilder aus Setup wurde nicht gelöscht</div>";
            }
       }
       echo "<a href='register.php'>User erstellen</a><br><a href='index.php'>Zum einloggen</a>";
