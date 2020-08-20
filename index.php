@@ -41,6 +41,7 @@ if(isset($_GET['logout'])){
     <title>Login</title>
     <link href="style.css" rel="stylesheet">
   </head>
+      <body>
 <?php
 include('install.php');
 }
