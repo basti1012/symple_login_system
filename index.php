@@ -15,8 +15,9 @@ if(!isset($_SESSION['username'])) {
 <body>
 <?php echo $infos;
 if (isset($_SESSION['username'])) {
+include('config.php');
      echo "<div class='succes'>Du bist schon eingeloggt</div>";
-     echo "<a href='geheim.php'>Geheime Seite</a>  <br>  <a href='logout.php'>Abmelden</a>";
+     echo "<a href='$nach_login'>Geheime Seite</a>  <br>  <a href='logout.php'>Abmelden</a>";
 } else {
 if(isset($_GET['logout'])){
     echo "<div class='succes'>Du hast dich erfolgreich ausgeloggt</div>";
@@ -41,10 +42,10 @@ if(isset($_GET['logout'])){
     <title>Login</title>
     <link href="style.css" rel="stylesheet">
   </head>
-      <body>
-<?php
-include('install.php');
-}
+  <body>
+  <?php
+    include('install.php');
+  }
 ?>
   </body>
 </html>
