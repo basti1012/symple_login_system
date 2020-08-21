@@ -15,10 +15,10 @@ if(isset($_POST['submit'])){
             header("Location: $nach_login");
             }
          }else{
-            $infos="<div class='error'>Pw falsch</div>";
+            $infos="<div class='error'>Das Passwort ist falsch.</div>";
          }
       }else{
-         $infos="<div class='error'>User gibt es nicht</div>";
+         $infos="<div class='error'>Den User gibt es nicht.</div>";
       }
 }
 ?>
