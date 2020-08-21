@@ -21,14 +21,14 @@ if (file_exists($filename3)) {
 <div id="setupcontainer">
 <h1>Anleitung und Setup</h1>
 <p>Wilkommen zur vereinfachten Version eines Login Systems mit Php und Datenbank.</p>
-<p>1.Starten Sie den Setup mit dem öffnen der index.php.
-<p>Glückwunsch, das haben SIE gemacht sonst könnten SIE das hier nicht lesen.</p>
+<p>1. Starten Sie den Setup mit dem öffnen der index.php.
+<p>Glückwunsch, das haben Sie gemacht sonst könnten Sie das hier nicht lesen.</p>
 <img src="setup.png" style="height:300px"><br>
-<p>2.Nach erfolgreicher Installation können SIE einen Benutzer erstellen</p>
-    <p>In der config.php können SIE den Email Text , Betreff , Absender und Header angaben ändern</p>
-    <p> {link} dient als Platzhalter für den Wiederherstellungs Link.Ändern Sie das Bitte nicht.</p>
+<p>2. Nach erfolgreicher Installation können SIE einen Benutzer erstellen</p>
+    <p>In der config.php können Sie den Email Text , Betreff , Absender und Header angaben ändern</p>
+    <p> {link} dient als Platzhalter für den Wiederherstellungs Link. Ändern Sie das Bitte nicht.</p>
 <img src="accound.png" style="height:300px"><br>
-<p>3.Danach können SIE sich einloggen</p>
+<p>3. Danach können Sie sich einloggen</p>
 <img src="anmelden.png" style="height:300px"><br>
 </div>
 <form id="install" name="eingabe" action="setupdatei.php" method="post">   
@@ -59,7 +59,7 @@ if (file_exists($filename3)) {
           <div class="info">[?]
               <span class="infotext">
                   Bei unveränderter Ordnerstrucktur muß der Pfad zu diesen Ordner angeben werden ( sollte Automatisch laufen ).
-                  Falls sie einen anderen Ordner benutzen oder die passwortreset.php in einen anderen Ordner liegt , muß der Pfad zu den Ordner
+                  Falls Sie einen anderen Ordner benutzen oder die passwortreset.php in einen anderen Ordner liegt , muß der Pfad zu den Ordner
                   angegeben werden wo die Passwort wiederherstellungsdatei liegt.
                   Dieser Link wird benötigt um den Wiederherstellungs Passwort Links in der Email zu erzeugen.
               </span>
@@ -71,7 +71,7 @@ if (file_exists($filename3)) {
          <input type="checkbox" name="kill" value="kill"> 
               <div class="info">[?]
                   <span class="infotext">
-                       Nach erfolgreicher Installation werden die Setupdatein gelöscht.Werden in der Regel auch nicht mehr gebraucht.
+                       Nach erfolgreicher Installation werden die Setupdatein gelöscht. Werden in der Regel auch nicht mehr gebraucht.
                   </span>
               </div>
      </label>
@@ -80,7 +80,7 @@ if (file_exists($filename3)) {
           <input type="checkbox" name="kill_bild" value="kill_bild">  
           <div class="info">[?]
               <span class="infotext">
-                  Nach erfolgreicher Installation werden auch die Bilder der Installations Anleitung gelöscht
+                  Nach erfolgreicher Installation werden auch die Bilder der Installations Anleitung gelöscht.
               </span>
           </div>
      </label>
