@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gebe ein neues Passwort ein</title>
+    <title>Neues Passwort</title>
     <link href="style.css" rel="stylesheet">
 
 </head>
@@ -22,10 +22,10 @@
                     $stmt->bindParam(":pw", $hash);
                     $stmt->bindParam(":token", $_GET["token"]);
                     $stmt->execute();
-                    echo '<div class="succes">Das Passwort wurde geändert </div><br>
+                    echo '<div class="succes">Das Passwort wurde geändert.</div><br>
                     <a href="index.php"></a>Login</a>';
                 } else {
-                    echo "<div class='error'>Die Passwörter stimmen nicht überein</div>";
+                    echo "<div class='error'>Die Passwörter stimmen nicht überein.</div>";
                 }
             }
             ?>
@@ -38,10 +38,10 @@
             </form>
             <?php
         } else {
-            echo "<div class='error'>Der Token ist ungültig</div><a href='passwordreset.php'>Neues Passwort anfordern</a>";
+            echo "<div class='error'>Der Token ist ungültig.</div><a href='passwordreset.php'>Neues Passwort anfordern</a>";
         }
     } else {
-        echo "<div class='error'>Kein gültiger Token gesendet</div><a href='passwordreset.php'>Neues Passwort anfordern</a>";
+        echo "<div class='error'>Kein gültiger Token gesendet.</div><a href='passwordreset.php'>Neues Passwort anfordern</a>";
     }
     ?>
 </body>
