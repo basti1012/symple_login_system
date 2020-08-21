@@ -26,9 +26,9 @@
             $sendetext = str_replace('{link}',$link,$sendetext);
             
             mail($_POST["email"], $betreff, $sendetext,$header);
-            echo "<div class='succes'>Die Email wurde versendet<br>Checke deinen Email accound</div>";
+            echo "<div class='succes'>Die Email wurde versendet.<br>Checke Sie Ihren E-Mail Account.</div>";
         } else {
-            echo "<div class='error'>Diese Email ist nicht angemeldet</div>";
+            echo "<div class='error'>Diese E-Mail Adresse ist nicht angemeldet.</div>";
         }
     }
     function generateRandomString($length = 10) {
