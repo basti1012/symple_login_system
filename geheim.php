@@ -1,14 +1,14 @@
 <?php
 session_start();
 if(!isset($_SESSION["username"])){
-  echo "Den Inhalt kannst du nur eingeloggt sehen";
+  echo "Den Inhalt können Sie nur eingeloggt sehen.";
   exit;
 }
 ?><!DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Geheim</title>
   </head>
   <body>
     <h1>Top Secret</h1>
