@@ -27,15 +27,15 @@
             $stmt->bindParam(":pw", $hash);
             $stmt->bindParam(":email", $_POST["email"]);
             $stmt->execute();
-            echo "<div class='succes'>Dein Account wurde angelegt</div>";
+            echo "<div class='succes'>Ihr Account wurde angelegt.</div>";
           } else {
-            echo "<div class='error'>Die Passwörter stimmen nicht überein</div>";
+            echo "<div class='error'>Die Passwörter stimmen nicht überein.</div>";
           }
         } else {
-          echo "<div class='error'>Email bereits vergeben</div>";
+          echo "<div class='error'>E-Mail Adresse bereits vergeben<./div>";
         }
       } else {
-        echo "<div class='error'>Der Username ist bereits vergeben</div>";
+        echo "<div class='error'>Der Username ist bereits vergeben.</div>";
       }
     }
      ?>
@@ -49,6 +49,6 @@
       <button  class="input_feld erstelle" type="submit" name="submit">Erstellen</button>
     </form>
     <br>
-    <a href="index.php">Hast du bereits einen Account?</a>
+    <a href="index.php">Haben Sie bereits einen Account?</a>
   </body>
 </html>
