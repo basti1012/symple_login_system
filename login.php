@@ -1,8 +1,13 @@
 <?php
 if(isset($_POST['submit'])){
-      include("mysql.php");
-      $stmt = $mysql->prepare("SELECT * FROM $tabelle WHERE user = :user");
-      $stmt->bindParam(":user",$_POST["username"]);
+      include("mysql.php");      
+      if (filter_var($_POST["username"], FILTER_VALIDATE_EMAIL)) {
+          $stmt = $mysql->prepare("SELECT * FROM $tabelle WHERE email = :email");
+          $stmt->bindParam(":email",$_POST["username"]);
+      } else {
+          $stmt = $mysql->prepare("SELECT * FROM $tabelle WHERE user = :user");
+          $stmt->bindParam(":user",$_POST["username"]);
+      } 
       $stmt->execute();
       $count = $stmt->rowCount();
       if($count == 1){
@@ -15,7 +20,7 @@ if(isset($_POST['submit'])){
             header("Location: $nach_login");
             }
          }else{
-            $infos="<div class='error'>Pw falsch</div>";
+            $infos="<div class='error'>Einlogdaten  falsch</div>";
          }
       }else{
          $infos="<div class='error'>User gibt es nicht</div>";
