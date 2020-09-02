@@ -12,6 +12,11 @@ if(!isset($_SESSION["username"])){
   </head>
   <body>
     <h1>Top Secret</h1>
+    <?php
+    if(isset($_SESSION['username'])) {
+    echo "<h1>Hallo ".$_SESSION['username']."</h1>";
+}
+?>
     <a href="logout.php">Abmelden</a>
   </body>
 </html>
