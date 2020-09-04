@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +11,7 @@
     <?php
     if(isset($_GET["token"])){
         require("mysql.php");
-        $stmt = $mysql->prepare("SELECT * FROM `$tabelle` WHERE token = :token");
+        $stmt = $mysql->prepare("SELECT `token` FROM `$tabelle` WHERE token = :token");
         $stmt->bindParam(":token", $_GET["token"]);
         $stmt->execute();
         $count = $stmt->rowCount();
@@ -31,8 +32,10 @@
             ?>
  
             <form class="create" action="setpassword.php?token=<?php echo $_GET["token"] ?>" method="POST">
-                       <h1>Neues Passwort setzen</h1>
+                <h1>Neues Passwort setzen</h1>
+                <label>Passoerd </label>
                 <input  class="input_feld" type="password" name="pw1" placeholder="Password" required><br>
+                <label>Password wiederholen</label>
                 <input  class="input_feld" type="password" name="pw2" placeholder="Password wiederholen" required><br>
                 <button class="input_feld erstelle"  type="submit" name="submit">Passwort setzen</button>
             </form>
