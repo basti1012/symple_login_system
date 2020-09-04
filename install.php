@@ -23,38 +23,33 @@ if (file_exists($filename3)) {
 <p>Wilkommen zur vereinfachten Version eines Login Systems mit Php und Datenbank.</p>
 <p>1.Starten Sie den Setup mit dem öffnen der index.php.
 <p>Glückwunsch, das haben SIE gemacht sonst könnten SIE das hier nicht lesen.</p>
-<img src="setup.png" style="height:300px"><br>
+<img src="setup.png" alt="setuo" style="height:300px"><br>
 <p>2.Nach erfolgreicher Installation können SIE einen Benutzer erstellen</p>
     <p>In der config.php können SIE den Email Text , Betreff , Absender und Header angaben ändern</p>
     <p> {link} dient als Platzhalter für den Wiederherstellungs Link.Ändern Sie das Bitte nicht.</p>
-<img src="accound.png" style="height:300px"><br>
+<img src="accound.png" alt="accound" style="height:300px"><br>
 <p>3.Danach können SIE sich einloggen</p>
-<img src="anmelden.png" style="height:300px"><br>
+<img src="anmelden.png" alt="anmelden" style="height:300px"><br>
 </div>
 <form id="install" name="eingabe" action="setupdatei.php" method="post">   
      <h1>Setup starten</h1>
-     <label>
-          <p>Datenbank Host: </p>
+     <label>  Datenbank Host:  </label> 
           <input type="text" id="dbhost" name="dbhost" class="input_feld">
-     </label> 
-     <label>
-          <p>Datenbank Name: </p>
+
+     <label> Datenbank Name:  </label> 
           <input type="text" id="dbname" name="dbname" class="input_feld">
-     </label> 
-     <label>
-          <p>Datenbank User: </p>
+  
+     <label>   Datenbank User:   </label> 
           <input type="text" id="dbuser" name="dbuser" class="input_feld">
-     </label> 
-     <label>
-          <p>Name der Tabelle: </p>
+
+     <label>   Name der Tabelle:   </label> 
           <input type="text" id="name_tabelle" name="name_tabelle" value="users" class="input_feld">
-     </label> 
-     <label>
-          <p>Passwort: </p>
+
+     <label>  Passwort:   </label> 
           <input type="text" id="dbpw" name="dbpw"  class="input_feld">
-     </label> 
+    
      <label>
-          <p>Link zum diesen Ordner:</p>
+           Link zum diesen Ordner: </label>
           <input  type="text" id="pw_link"  class="input_feld input_feld_info" name="pw_link" value="<?php echo $HOST; ?>">
           <div class="info">[?]
               <span class="infotext">
@@ -64,7 +59,7 @@ if (file_exists($filename3)) {
                   Dieser Link wird benötigt um den Wiederherstellungs Passwort Links in der Email zu erzeugen.
               </span>
           </div>
-     </label>
+   
   <!--
      <label>
          <p>Setupdatei Löschen ?*</p>
