@@ -11,7 +11,7 @@
     if (isset($_POST["submit"])) {
         include('config.php');
         require("mysql.php");
-        $stmt = $mysql->prepare("SELECT * FROM `$tabelle` WHERE email = :email");
+        $stmt = $mysql->prepare("SELECT `email` FROM `$tabelle` WHERE email = :email");
         $stmt->bindParam(":email", $_POST["email"]);
         $stmt->execute();
         $count = $stmt->rowCount();
@@ -44,6 +44,7 @@
 
     <form class="create" action="passwordreset.php" method="POST">
         <h1>Passwort vergessen?</h1>
+        <label>Email eingabe</label>
         <input class="input_feld" type="email" name="email" placeholder="Email" required><br>
         <button class="input_feld" type="submit" name="submit">Zurücksetzen</button>
     </form>
