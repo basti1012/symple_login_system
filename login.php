@@ -19,11 +19,8 @@ if(isset($_POST['submit'])){
             if($nach_login!=''){
             header("Location: $nach_login");
             }
-         }else{
-            $infos="<div class='error'>Einlogdaten  falsch</div>";
-         }
-      }else{
-         $infos="<div class='error'>User gibt es nicht</div>";
+         } 
       }
+      $infos="<div class='error'>Einlogdaten  falsch</div>";
 }
 ?>
